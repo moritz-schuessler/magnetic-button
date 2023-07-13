@@ -15,12 +15,17 @@ import Button from "../components/Button.astro";
 		--darkColor: rgb(25,25,25);
 		--lightColor: rgb(200,200,200);
 		--accentColor: rgb(242,162,92);
+	}
 
-		box-sizing: content-box;
+	*, *::before, *::after {
+		box-sizing: border-box;
+	}
+
+	html {
+		color-scheme: dark;
 	}
 
 	body {
-		padding: 0;
 		margin: 0;
 		overscroll-behavior: none;
 	}
@@ -31,8 +36,8 @@ import Button from "../components/Button.astro";
 		justify-content: center;
 		align-items: center;
 
-		height: 100vh;
-		width: 100vw;
+		height: 100dvh;
+		width: 100dvw;
 	}
 </style>
 

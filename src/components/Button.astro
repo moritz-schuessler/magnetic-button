@@ -6,17 +6,26 @@ export interface Props {
 const { content } = Astro.props;
 ---
 
-<a href="">
-    {content}
+<a href="" class="button">
+    <p class="button-text">
+        {content}
+    </p>
 </a>
+
+<script src="../scripts/magnetic.js"></script>
+
 <style>
-    a {
+    .button {
+        --top: 100%;
+
         color: var(--darkColor);
         background-color: var(--lightColor);
 
         display: flex;
         justify-content: center;
         align-items: center;
+
+        position: relative;
 
         height: 10rem;
         width: 10rem;
@@ -27,9 +36,32 @@ const { content } = Astro.props;
         text-decoration: none;
 
         cursor: pointer;
+        overflow: hidden;
+
     }
 
-    a:hover {
-        background-color: var(--accentColor);
+    .button-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    .button:after {
+        content: '';
+
+        background: var(--accentColor);
+
+        position: absolute;
+        top: var(--top);
+        z-index: 1;
+
+        height: 10rem;
+        width: 10rem;
+
+        border: none;
+        border-radius: 90px;
     }
 </style>
