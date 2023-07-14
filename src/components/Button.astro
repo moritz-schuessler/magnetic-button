@@ -3,16 +3,17 @@ export interface Props {
     content: string;
 }
 
-const { content } = Astro.props;
+const {content} = Astro.props;
 ---
+<magnetic-button>
+    <a href="" class="button">
+        <p class="button-text">
+            {content}
+        </p>
+    </a>
+</magnetic-button>
 
-<a href="" class="button">
-    <p class="button-text">
-        {content}
-    </p>
-</a>
-
-<script src="../scripts/magnetic.js"></script>
+<script src="../scripts/magnetic-button.js"></script>
 
 <style>
     .button {
