@@ -1,55 +1,54 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Button from "../components/Button.astro";
-
 ---
 
 <Layout title="Magnetic Button">
-	<main>
-		<Button content="This is magnetic!" />
-	</main>
+    <main>
+        <Button content="This is magnetic!"/>
+    </main>
 </Layout>
 
 <style is:global>
-	@font-face {
-		font-family: 'Satoshi-Regular';
-		src: url('/fonts/satoshi/Satoshi-Regular.woff2') format('woff2'),
-		url('/fonts/satoshi/Satoshi-Regular.woff') format('woff'),
-		url('/fonts/satoshi/Satoshi-Regular.ttf') format('truetype');
-		font-weight: 400;
-		font-display: swap;
-		font-style: normal;
-	}
+    @font-face {
+        font-family: 'Satoshi-Regular';
+        src: url('/fonts/satoshi/Satoshi-Regular.woff2') format('woff2'),
+        url('/fonts/satoshi/Satoshi-Regular.woff') format('woff'),
+        url('/fonts/satoshi/Satoshi-Regular.ttf') format('truetype');
+        font-weight: 400;
+        font-display: swap;
+        font-style: normal;
+    }
 
-	:root {
-		--darkColor: rgb(25,25,25);
-		--lightColor: rgb(200,200,200);
-		--accentColor: rgb(242,162,92);
+    :root {
+        --darkColor: rgb(25, 25, 25);
+        --lightColor: rgb(200, 200, 200);
+        --accentColor: rgb(242, 162, 92);
 
-		font-family: 'Satoshi-Regular', sans-serif;
-	}
+        font-family: 'Satoshi-Regular', sans-serif;
+    }
 
-	*, *::before, *::after {
-		box-sizing: border-box;
-	}
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
 
-	html {
-		color-scheme: dark;
-	}
+    html {
+        color-scheme: dark;
+    }
 
-	body {
-		margin: 0;
-		overscroll-behavior: none;
-	}
+    body {
+        margin: 0;
+        overscroll-behavior: none;
+    }
 </style>
 <style>
-	main {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-		height: 100dvh;
-		width: 100dvw;
-	}
+        height: 100dvh;
+        width: 100dvw;
+    }
 </style>
 
