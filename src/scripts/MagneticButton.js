@@ -1,12 +1,10 @@
 import {gsap} from "gsap";
 
-customElements.define('magnetic-button', class extends HTMLElement {
+class MagneticButton extends HTMLElement {
     constructor() {
         super();
 
         const button = this.querySelector('.button');
-
-        console.log('test')
 
         button.addEventListener('mousemove', (event) => {
             let x = ((event.offsetX - button.clientWidth / 2) / button.clientWidth / 2) * 150;
@@ -45,6 +43,6 @@ customElements.define('magnetic-button', class extends HTMLElement {
             })
         })
     }
-})
+}
 
-
+customElements.define('magnetic-button', MagneticButton)
